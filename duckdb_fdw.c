@@ -1830,7 +1830,7 @@ sqlitePlanForeignModify(PlannerInfo *root,
 			attno = col + FirstLowInvalidHeapAttributeNumber;
 #else
 		Bitmapset *tmpset;
-		tmpset = bms_union(rte->updatedCols, rte->extraUpdatedCols);
+		tmpset = bms_union(rte->updatedCols, rte->updatedCols);
 
 		while ((attno = bms_first_member(tmpset)) >= 0)
 		{
